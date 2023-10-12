@@ -57,6 +57,51 @@ const myFunction = function(){
     console.log("Hello World")
 }
 
-console.log(typeof heros) // => Object
-console.log(typeof myObj) // => Object
-console.log(typeof myFunction) // => Function Object
+// console.log(typeof heros) // => Object
+// console.log(typeof myObj) // => Object
+// console.log(typeof myFunction) // => Function Object
+
+
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+// Stack (Primitive datatype) , Heap (Non-Primitive datatype)
+
+// Whenever Stack memory is used whatever variable you declared you will get a copy of it.
+// Whenever you use Heap memory you get a reference, so whatever you change reflects in the original variable
+
+// ************** Stack Memory **************
+
+let channelname = "Good World"
+let anotherChannel = channelname
+
+// console.log(channelname, anotherChannel); // => Good World Good World
+
+anotherChannel = "Bad World"
+
+// console.log(channelname, anotherChannel); // => Good World Bad World
+// Over here the channelname variable does not change
+
+
+// ************** Heap Memory **************
+
+let userOne = {
+    name: "Bhavya",
+    upi : "b@ypl"
+}
+
+let userTwo = userOne
+
+// console.log(userOne.name, userOne.upi) // => Bhavya b@ypl
+// console.log(userTwo.name, userTwo.upi) // => Bhavya b@ypl
+
+userTwo.name = "Vishal"
+
+// console.log(userOne.name, userOne.upi) // => Vishal b@ypl
+// console.log(userTwo.name, userTwo.upi) // => Vishal b@ypl
+// Over here the userOne variable does change as both of them are references to the same object
+
