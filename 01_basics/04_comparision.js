@@ -28,4 +28,4 @@
  * === (Strict Check) [It also check the Datatype of the 2 variables]
  */
 
-console.log("2" === 2);
+console.log("2" === 2); // => false [Because it check the datatypes as well]
