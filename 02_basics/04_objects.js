@@ -66,5 +66,20 @@ console.log(Object.entries(obj5));
 /** 
  * To check if a property exist in an object
  */
-console.log(obj5.hasOwnProperty('1'));    // => True
-console.log(obj5.hasOwnProperty('age'));  // => False
+// console.log(obj5.hasOwnProperty('1'));    // => True
+// console.log(obj5.hasOwnProperty('age'));  // => False
+
+
+/**
+ * Destructuring the objects
+ */
+
+const course ={
+    name : "js in hindi",
+    price : "999",
+    courseInstructor : "Hitesh"
+}
+
+const {courseInstructor} = course
+
+console.log(courseInstructor);
