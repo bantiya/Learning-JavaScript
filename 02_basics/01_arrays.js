@@ -15,16 +15,15 @@ const  newnewArr = newArr.join() // Used to convertarray to string
 
 
 const arr1 = [1,2,3,4,5,6]
-console.log(`A: [${arr1}]`);
-
+// console.log(`A: [${arr1}]`);
 
 /**
  * Slicing make a new array with the sliced elements
  */
 
 const arr2 = arr1.slice(1,3)
-console.log(`After slicing original array at (1,3): [${arr1}]`);
-console.log(`B: new array [${arr2}]`);
+// console.log(`After slicing original array at (1,3): [${arr1}]`);
+// console.log(`B: new array [${arr2}]`);
 
 
 /**
@@ -32,8 +31,8 @@ console.log(`B: new array [${arr2}]`);
  */
 
 const arr3 = arr1.splice(1,3)
-console.log(`After splicing original array at (1,3): [${arr1}]`);
-console.log(`C: new array [${arr3}]`);
+// console.log(`After splicing original array at (1,3): [${arr1}]`);
+// console.log(`C: new array [${arr3}]`);
 
 
 
