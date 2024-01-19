@@ -1,52 +1,74 @@
 // Objects
 
-/** ******* Singleton ********
- * Whenever you make an object from constructor it is a Singleton object {Object.create}
+// ++++++++++++++++++++++++++++++++++ 2 types of Objects ++++++++++++++++++++++++++++++++
+
+/**
+ * SingleTon Object:- Whenever you make an object from constructor it is a Singleton object 
+ *                    {we can use Object.create to create a singleton object}
  * 
- * Otherwise it is a Literal object {const JSuser = {}}
+ * Literal Object:- Any other object is a Literal object { const JSuser = {} }
  */
 
-const mySym = Symbol("Keys1")
+ 
+// Declaring Symbol to add in object JSuser
+const mySum = Symbol("myKey1") 
 
+// Object Literal
 const JSuser = {
     name : "Bhavya",
     age : 18,
-    [mySym] : "myKey1",            // to link the Symbol mySym from above we need to use the brackets []
+    [mySum] : "myKey1",            // to link the Symbol mySym from above we need to use the brackets []
     location : "Jaipur",
     email : "bvs@google.com",
     isLoggedIn : false,
     lastLoginDays : ["Monday", "Saturday"]
 }
 
-// Printing and Accessing the objects
+
+// ********************************** Printing and accessing Objects **********************************
+
 // console.log(JSuser.name);
 // console.log(JSuser["email"]);
-// console.log(JSuser[mySym]);             // To access the Symbol you need to add brckets []
-// console.log(JSuser["email"]);
+// console.log(JSuser[mySum]);    // To access the Symbol you need to add brckets []
 
-// Freeze the object so that no one can change the data in the object
+JSuser.email = "b1234!@gmail.com"
+// console.log(JSuser["email"]);   // b1234!@gmail.com
+
+
+// ********************************** FREEZE OBJECTS **********************************
+
+// so that no one can change the data in the object
 // Object.freeze(JSuser)
 
-// console.log(JSuser); // => {
-                        //     name: 'Bhavya',
-                        //     age: 18,
-                        //     location: 'Jaipur',
-                        //     email: 'bvs@google.com',
-                        //     isLoggedIn: false,
-                        //     lastLoginDays: [ 'Monday', 'Saturday' ],
-                        //     [Symbol(Keys1)]: 'myKey1'
-                        //   }
 
-// Adding function to a Object
-JSuser.greetings = function () {
+// ********************************** Function in Objects **********************************
+
+JSuser.greeting = function () {
     console.log("Hello JS Users")
 }
 
-JSuser.greetingsTwo = function () {
-    console.log(`Hello JS Users, ${this.name}`)    // this is used to refer to the same object {JSuser}
+// console.log(JSuser.greeting())
+
+JSuser.greetingTwo = function() {
+    console.log(`Hello ${this.name}, how are you`)  // this is used for referring to the same object
 }
 
-console.log(JSuser);
-console.log(JSuser.greetingsTwo());
+// console.log(JSuser.greetingsTwo());   // Hello Bhavya, how are you
+
+
+// ********************************** JSuser at the end **********************************
+
+// JSuser  =       
+            // {
+            //     name: 'Bhavya',
+            //     age: 18,
+            //     location: 'Jaipur',
+            //     email: 'b1234!@gmail.com',
+            //     isLoggedIn: false,
+            //     lastLoginDays: [ 'Monday', 'Saturday' ],
+            //     greeting: [Function (anonymous)],
+            //     greetingTwo: [Function (anonymous)],
+            //     [Symbol(myKey1)]: 'myKey1'
+            //   }
 
 
