@@ -18,7 +18,7 @@ const newHeros = marvel_heros.concat(dc_heros)
 
 
 
-// ++++++++++++++++++++++++++++++++++ Spread Operator ++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++ Spread Operator / REST OPERATOR ++++++++++++++++++++++++++++++++
 
 const allHeros = [...marvel_heros, ...dc_heros] // [ 'thor', 'Ironman', 'spiderman', 'superman', 'flash', 'batman' ]
 
