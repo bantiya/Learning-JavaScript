@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+<body style="background-color: antiquewhite;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = langName  // this code travels the whole page 
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("Java")
+    addLanguage("TypeScript")
+
+    function optilang(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))  // Over here we just create a text node and add it to li
+        document.querySelector(".language").appendChild(li)
+    }
+
+    optilang("Golang")
+
+
+    //  EDIT
+    const secondlang = document.querySelector('li:nth-child(2)')
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondlang.replaceWith(newli) // Replacing secondlang with newli
+
+    //   EDIT
+    const firstlang = document.querySelector('li:first-child')
+    console.log(firstlang)
+    const newlang = document.createElement('li')
+    newlang.textContent = "TypeScript"
+    firstlang.replaceWith(newlang)
+
+    //  Removes
+    const lastChild = document.querySelector('li:last-child')
+    lastChild.remove()
+
+
+</script>
+</html>
