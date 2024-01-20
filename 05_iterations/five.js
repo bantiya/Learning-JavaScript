@@ -1,3 +1,5 @@
+// ++++++++++++++++++++++++++ ForEach does not return anything ++++++++++++++++++++++++++
+
 const coding = ["js","ruby","py","cpp"]
 
 
