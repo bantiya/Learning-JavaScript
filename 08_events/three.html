@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur JavaScript</title>
+</head>
+<body>
+    <H1> Chai Aur code</H1>
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+</body>
+<script>
+    let setIntervalReferenceId = null
+    let flag = false
+    
+    // starting the setInterval()
+    function start() {
+        setIntervalReferenceId = setInterval((str) => (
+            console.log(`${str} : ${Date.now()}` )
+        ),1000, "Time is")
+    }
+
+    // stopping the startInterval with ==> clearInterval()
+    function stop() {
+        clearInterval(setIntervalReferenceId)
+    }
+
+    document.querySelector('.start').addEventListener('click', () => {
+        if(flag === false) {
+            flag = true
+            start()
+        }
+        else {   //  flag === true
+            alert("Timer has already started.")
+        }
+    })
+
+    document.querySelector('.stop').addEventListener('click', () => {
+        if(flag === true) {
+            flag = false
+            stop()
+        }
+        else {    //  flag === false
+            alert("Timer has not started.")
+        }
+    })
+
+
+</script>
+</html>
