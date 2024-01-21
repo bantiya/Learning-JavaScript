@@ -1,0 +1,23 @@
+### Default JavaScript ###
+    + works Synchronously
+    + And works on Single Thread
+
+### Execcution Contect for JavaScript ###
+    + Executes one line at a time
+    + We have Call Stack, and Memory Heap
+
+
+BLOCKING CODE                   V/S                   NON-BLOCKING CODE
+
+* Block the flow of                             * Does not block the flow of 
+  Programm                                         Programm
+
+* Reads File Synchronously                      * Reads File Asynchronously
+
+
+
+We use Synchronous or Asynchronous based on the use case or Requirement
+
+
++ Fetch() API has a high Priority / Promise Queue
+
