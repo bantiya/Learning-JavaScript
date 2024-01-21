@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+<body>
+    <H1> Chai Aur code</H1>
+    <button class="stop">Stop</button>
+</body>
+<script>
+    function printAfter2Sec() {
+        console.log("Bhavya")
+        document.querySelector('h1').innerHTML = "Best JavaScript series "
+    }
+
+    // this will execute the function after 2 secs
+    const changeme = setTimeout(printAfter2Sec, 2000)   // just give reference of the function do not execut it
+
+     // clearTimeout is Used to stop setTimeout
+    document.querySelector(".stop").addEventListener('click', function() {
+        clearTimeout(changeme)
+        console.log("STOPPED")
+    })
+
+    
+</script>
+</html>
