@@ -116,3 +116,32 @@ fetch('https://jsonplaceholder.typicode.com/uers')
     console.log(`Everything got handled properly`);
 })
 
+
+// ++++++++++++++++++++++++++++++++++++++++ How Fetch Works ++++++++++++++++++++++++++++++++++++++++
+/**
+ * Whenever fetch is mentined 2 fields run:
+ * 1. Web Browser / Node
+ * 2. Variable & Data Reservation
+ * 
+ * 
+ * + Fetch has a high priority queue.
+ * 
+ * 
+ * 
+ * Step ..1.. Web Browser / Node:
+ * + So if a network request is sent any response that we get, is handled by Onfulfilled[] (response). {eg: even 404:File not found }
+ * + And if the network rquest is not sent than we get a rejection, handled by OnRejection[] (reject).
+ * 
+ * 
+ * Step ..2..  VAriable and Data Resetvation
+ * + There are two different array's which are private and you cannot access it:
+ *      +*+ Onfulfilled[] :- promise(response)
+ *      +*+ OnRejection[] :- promise(reject)
+ * 
+ * 
+ * Step ..2.. Fulfilling Data
+ * + Once all the operations are done either response or request gets fired and fulfills either of the array, which have function in them, 
+ *   than in result fulfill the response available in your Global Memory
+ * 
+ * 
+ */
